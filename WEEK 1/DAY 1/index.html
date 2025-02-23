@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay">
+        <img src="./background.jpg" alt="background" class="background-image">
+    </div>
+
+    <div class="form-container">
+        <div class="forms-wrapper">
+
+            <!-- Login Form-->
+             <div class="form login-form">
+                <h2>Login</h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <input type="email" name="email" id="login-email" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                <p class="switch-form-text">
+                    Don't you have an account?
+                    <a href="#" class="switch-form-btn" data-target="register">Sign Up</a>
+                </p>
+            </div>
+
+            <!-- Register Form-->
+            <div class="form register-form">
+                <h2>
+                    Sign Up
+                </h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="fullname" placeholder="Name Surname" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="date" name="birthdate" placeholder="Date of birth" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </form>
+                <p class="switch-form-text">
+                    Do you already have an account?
+                    <a href="#" class="switch-form-btn" data-target="login">Login</a>
+                </p>
+            </div>
+ 
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.switch-form-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('.forms-wrapper').classList.toggle('show-register');
+            });
+        });
+    </script>
+</body>
+</html>

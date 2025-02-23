@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sepete Eklendi -->
+    <div class="notification-container">
+        <div class="notification" id="notification">
+            <div class="notification-content">
+                <span class="notification-icon">✓</span>
+                <span class="notification-text">Sepete Eklendi</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="products">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./IPhone 15 Pro.png" alt="IPhone 15 Pro"/>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">IPhone 15 Pro 128 GB</h2>
+                    <p class="product-subtitle">Smartphone Black Titanium</p>
+                    <div class="product-price">$999</div>
+                    <button class="add-to-cart">Add To Cart</button>
+                </div>
+
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./IPhone 15.png" alt="IPhone 15"/>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">IPhone 15 Pro 128 GB</h2>
+                    <p class="product-subtitle">Smartphone Black</p>
+                    <div class="product-price">$799</div>
+                    <button class="add-to-cart">Add To Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./IPhone 15 Plus.png" alt="IPhone 15 Plus"/>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">IPhone 15 Plus 128 GB</h2>
+                    <p class="product-subtitle">Smartphone Blue</p>
+                    <div class="product-price">$899</div>
+                    <button class="add-to-cart">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const notification = document.getElementById("notification");
+            const buttons = document.querySelectorAll(".add-to-cart");
+    
+            // Bildirimi başlangıçta gizle
+            notification.style.display = "none";
+    
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // Bildirimi önce görünür yap
+                    notification.style.display = "flex";
+    
+                    // Eğer önceki bir bildirim animasyonu varsa temizle
+                    clearTimeout(window.notificationTimeout);
+                    
+                    // Mevcut bildirimi kaldır (varsa)
+                    notification.classList.remove("show");
+    
+                    // Yeni bildirimi göster (10ms gecikme ile - animasyon reset için)
+                    setTimeout(() => {
+                        notification.classList.add("show");
+                    }, 10);
+    
+                    // 3 saniye sonra bildirimi kaldır
+                    window.notificationTimeout = setTimeout(() => {
+                        notification.classList.remove("show");
+                        setTimeout(() => {
+                            notification.style.display = "none"; // Tamamen gizle
+                        }, 300); // Animasyon süresi kadar bekle
+                    }, 3000);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

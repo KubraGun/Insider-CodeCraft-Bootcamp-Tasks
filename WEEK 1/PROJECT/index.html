@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">DARK</div>
+        <div class="hamburger">
+           <span></span>
+           <span></span>
+           <span></span>
+        </div>
+        <ul class="nav-links">
+           <li><a href="#home">Home</a></li>
+           <li><a href="#featured">Featured</a></li>
+           <li><a href="#episodes">Episodes</a></li>
+           <li><a href="#about">About</a></li>
+        </ul>
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>DARK</h1>
+            <h2>Everything is Connected</h2>
+            <p class="director">Director: Baran bo Odar</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <span style="color:aliceblue">8.8 IMDB</span>
+                <a href="https://www.imdb.com/title/tt5753856/" target="_blank" class="imdb-link">IMDB'de İncele</a>
+            </div>
+
+            <!-- Character Gallery -->
+             <div class="character-gallery">
+                <div class="character-card">
+                    <img src="./src/assets/images/characters/jonas.png" alt="Jonas Kahnwald">
+                    <div class="character-info">
+                        <h3>Jonas Kahnwald</h3>
+                        <p>Louis Hofmann</p>
+                    </div>
+                    <div class="character-details">
+                        <h3>Jonas Kahnwald</h3>
+                        <p>The protagonist of the show, Jonas is a troubled teenager who discovers the secrets of time travel.</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <img src="./src/assets/images/characters/martha.png" alt="Martha Nielsen">
+                    <div class="character-info">
+                        <h3>Martha Nielsen</h3>
+                        <p>Lisa Vicari</p>
+                    </div>
+                    <div class="character-details">
+                        <h3>Martha Nielsen</h3>
+                        <p>A determined teenager entangled in the time travel mysteries of Winden and a complex relationship with Jonas Kahnwald. </p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <img src="./src/assets/images/characters/ulrich.png" alt="Ulrich Nielsen">
+                    <div class="character-info">
+                        <h3>Ulrich Nielsen</h3>
+                        <p>Oliver Masucci</p>
+                    </div>
+                    <div class="character-details">
+                        <h3>Ulrich Nielsen</h3>
+                        <p>A police officer searching for his missing son across different time periods, whose actions create devastating generational consequences.</p>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <img src="./src/assets/images/characters/charlotte.png" alt="Charlotte Doppler">
+                    <div class="character-info">
+                        <h3>Charlotte Dopler</h3>
+                        <p>Karoline Eichhorn</p>
+                    </div>
+                    <div class="character-details">
+                        <h3>Charlotte Doppler</h3>
+                        <p>Winden's police chief investigating missing children cases while uncovering shocking truths about her own mysterious origins.</p>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <img src="./src/assets/images/characters/claude.png" alt="Claude Tiedemann">
+                    <div class="character-info">
+                        <h3>Claude Tiedemann</h3>
+                        <p>Julika Jenkins</p>
+                    </div>
+                    <div class="character-details">
+                        <h3>Claude Tiedemann</h3>
+                        <p>From nuclear plant director to time travel expert, she becomes a crucial figure in understanding and attempting to break Winden's cycle.</p>
+                    </div>
+                </div>
+             </div>
+        </div>
+     </section>
+    
+     <!-- Featured Scene -->
+      <section id="featured" class="featured-scene">
+        <div class="container">
+            <h2>Featured Scene</h2>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <!--yotube>share>embed-->
+                <iframe id="youtube-video" 
+                     width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/7fx3Lm85uDg?si=29HrhIB55gc2QMfz" 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    style="display: none;">
+
+                </iframe>
+            </div>
+        </div>
+      </section>
+
+      <!-- Episodes -->
+    <section id="episodes" class="episodes">
+        <div class="container">
+            <h2>Episodes</h2>
+            <div class="episode-slider-container">
+                <button class="slider-arrow prev-arrow" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="episode-slider">
+                    <div class="episode-track">
+                        <!-- Episode 1 -->
+                        <div class="episode-card">
+                            <div class="episode-image">
+                                <img src="./src/assets/images/episodes/s1e1.png" alt="s1e1">
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="episode-content">
+                                <h3>Episode 1: Secrets</h3>
+                                <p class="episode-description">In 2019, the disappearance of two children reveals the past and relationships of four families...</p>
+                                <div class="episode-expand">
+                                    <p class="full-synopsis">In 2019, a local boy's disappearance stokes fear in the residents of Winden, a small German town with a strange and tragic history.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Episode 2 -->
+                        <div class="episode-card">
+                            <div class="episode-image">
+                                <img src="./src/assets/images/episodes/s1e2.png" alt="s2e2">
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="episode-content">
+                                <h3>Episode 2: Lies</h3>
+                                <p class="episode-description">As mysterious events in the town deepen, tensions between families escalate...</p>
+                                <div class="episode-expand">
+                                    <p class="full-synopsis">When a grim discovery leaves the police baffled, Ulrich seeks a search warrant for the power plant. A mysterious stranger checks into the hotel.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Episode 3 -->
+                        <div class="episode-card">
+                            <div class="episode-image">
+                                <img src="./src/assets/images/episodes/s1e3.png" alt="s1e3">
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="episode-content">
+                                <h3>Episode 3: Past and Present</h3>
+                                <p class="episode-description">The first signs of time travel appear, the past and the future intertwine...</p>
+                                <div class="episode-expand">
+                                    <p class="full-synopsis">It's 1986, and Ulrich's brother, Mads, has been missing for a month. Confusion reigns as past and present intertwine.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Episode 4 -->
+                        <div class="episode-card">
+                            <div class="episode-image">
+                                <img src="./src/assets/images/episodes/s1e4.png" alt="s1e4">
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="episode-content">
+                                <h3>Episode 4: Double Lives</h3>
+                                <p class="episode-description">The lives of the characters in different time periods begin to emerge...</p>
+                                <div class="episode-expand">
+                                    <p class="full-synopsis">Bizarre occurrences give Charlotte a sense of déjà vu, and she suspects Peter is hiding something. Franziska snaps when Magnus confronts her.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Episode 5 -->
+                        <div class="episode-card">
+                            <div class="episode-image">
+                                <img src="./src/assets/images/episodes/s1e5.png" alt="s1e5">
+                                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="episode-content">
+                                <h3>Episode 5: Truths</h3>
+                                <p class="episode-description">As all secrets are revealed, the characters are forced to confront themselves...</p>
+                                <div class="episode-expand">
+                                    <p class="full-synopsis">Hannah takes her obsession with Ulrich too far. The stranger asks Regina to deliver an important package. Martha is torn between Jonas and Bartosz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-arrow next-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+       <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <!-- Banner -->
+                    <div class="about-image">
+                        <img src="./src/assets/images/banner.png" alt="Dark Poster">
+                    </div>
+        
+                    <!-- Text-->
+                    <div class="about-text">
+                        <h2 style="color:#d4af37; text-align: center; font-size: 2rem;">About DARK</h2>
+                        <p>
+                            DARK is a German science-fiction thriller television series co-created by 
+                            Baran bo Odar and Jantje Friese. The show first premiered on Netflix in 
+                            December 2017 and became one of the most critically acclaimed series of its time. 
+                            Set in the small German town of Winden, DARK explores the consequences of time travel 
+                            and the interconnected lives of four families over multiple generations.
+                        </p>
+                        <p>
+                            The series delves into themes of fate, free will, and the cyclical nature of time. 
+                            With a deeply intricate storyline and complex characters, DARK challenges viewers to 
+                            think beyond conventional storytelling. It has been praised for its cinematography, 
+                            atmosphere, and thought-provoking narrative.
+                        </p>
+                        <p>
+                            If you're looking for a mind-bending show that weaves together mystery, 
+                            science fiction, and deep philosophical questions, DARK is an absolute must-watch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+       <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://twitter.com/DARKNetflix" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/darknetflix/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/DARKNetflix/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+                <p class="copyright">© 2025 DARK. All Rights Reserved.</p>
+            </div>
+        </div>
+        <button id="scroll-top" class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+       </footer>
+    
+       <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // HAMBURGER MENU
+    document.querySelector(".hamburger").addEventListener('click', function(){
+        this.classList.toggle('active');
+        document.querySelector(".nav-links").classList.toggle('active');
+    });
+
+    // EPISODE SLIDER
+    const track = document.querySelector('.episode-track');
+    const slides = document.querySelectorAll('.episode-card');
+    const prevButton = document.querySelector(".prev-arrow");
+    const nextButton = document.querySelector(".next-arrow");
+
+    let currentIndex = 0;
+
+    function getSlideWidth() {
+        return slides[0].getBoundingClientRect().width + 20; // Kart genişliği + gap
+    }
+
+    function updateButtons() {
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex >= slides.length - 1;
+
+        prevButton.classList.toggle('disabled', currentIndex === 0);
+        nextButton.classList.toggle('disabled', currentIndex >= slides.length - 1);
+    }
+
+    function slideToIndex(index) {
+        currentIndex = index;
+        let slideWidth = getSlideWidth();
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        updateButtons();
+    }
+
+    prevButton.addEventListener('click', () => {
+        if(currentIndex > 0) {
+            slideToIndex(currentIndex - 1);
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if(currentIndex < slides.length - 1) {
+            slideToIndex(currentIndex + 1);
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        slideToIndex(currentIndex); // Responsive kaydırmayı düzelt
+    });
+
+    updateButtons();
+
+    // SCROLL TO TOP
+    const scrollBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // FAVORITE BUTTONS
+    document.querySelectorAll('.favorite-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.querySelector('i').classList.toggle('fas');
+            this.querySelector('i').classList.toggle('far');
+        });
+    });
+
+    // YOUTUBE VIDEO PLAY
+    function playVideo() {
+        let videoID = "7fx3Lm85uDg";
+        let iframe = document.getElementById("youtube-video");
+        let placeholder = document.querySelector(".video-placeholder");
+
+        iframe.src = `https://www.youtube.com/embed/${videoID}?autoplay=1&rel=0`;
+        iframe.style.display = "block";
+        placeholder.style.display = "none";
+    }
+
+    document.querySelector(".play-button").addEventListener("click", playVideo);
+
+    
+    const characterCards = document.querySelectorAll('.character-card');
+
+    characterCards.forEach(card => {
+        card.addEventListener('click', function() {
+            if (this.classList.contains('active')) {
+                this.classList.remove('active'); // Eğer açık ise kapat
+            } else {
+                characterCards.forEach(c => c.classList.remove('active')); // Diğer açık kartları kapat
+                this.classList.add('active'); // Yeni seçilen kartı aç
+            }
+        });
+    });
+
+});
+
+
+       </script>
+    
+        
+
+</body>
+</html>

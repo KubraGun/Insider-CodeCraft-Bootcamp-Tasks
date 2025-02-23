@@ -1,0 +1,308 @@
+/* Reset ve genel stil özellikleri */
+* {
+    margin : 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center; /* justify hizalar */
+    align-items: center; /* align hizalar */
+    /* bu iki özellikle child bileşenler, parent elementin içinde hem satır hem sütan bazında ortalanır.*/
+    min-height: 100vh; /* Görüntüleme alanının (viewport) tamamını kaplar, yani sayfanın minimum yüksekliği ekran yüksekliği kadar olur. */
+    /*100vh ekranın tamamına eşittir, yani viewport'un (görüntüleme alanının) %100’ünü kaplar. Daha büyük bir değer (120vh, 150vh gibi) verirsek, öğe ekranın dışına taşabilir.*/
+  /*min-height: 100vh; → Öğenin yüksekliği en az ekranın tamamını kaplar.
+    height: 100vh; → Öğenin yüksekliği tam olarak ekranın yüksekliği kadar olur (değişmez).
+    max-height: 100vh; → Öğenin yüksekliği en fazla ekran kadar olur (büyüyemez ama küçülebilir).
+    Eğer içerik fazla olursa?
+
+    min-height: 100vh; içeriğe uyum sağlar ve büyüyebilir.
+    height: 100vh; içeriği sınırlar ve taşmasına neden olabilir. min weight genellikle daha iyi bir seçim*/
+    padding: 2rem;
+    /*1rem = 16px kabul edildiğinde → 2rem = 32px olur.*/
+}
+
+
+.container {
+    max-width: 1200px; /* Konteynerin maksimum genişliğini 1200px ile sınırlandırır, daha büyük ekranlarda taşmasını önler. */
+    margin: 0 auto;  /* Konteyneri yatay eksende (sağa ve sola) ortalar. */
+}
+
+/*
+margin: _ _;   
+ilk değer --> top ve bottom
+2. değer --> right ve left
+auto değeri, blok öğeler (display: block;) için boş alanı otomatik olarak iki yana eşit dağıtarak ortalama işlemi yapar.
+Ancak bu yöntemin çalışması için width veya max-width belirlenmiş olmalıdır, aksi takdirde öğe tam genişlik kapladığı için ortalama gerçekleşmez.
+Eğer margin: auto; tek başına kullanılırsa (yani sadece width değeri ve margin: auto olursa)
+a üst-alt da otomatik boşluk alır, ancak genellikle auto üst-alt boşluk için çalışmaz. Yatay eksende yine ortalanır.
+*/
+
+/* Ürün grid yapısı*/
+.products {
+    display: grid; /* Öğeleri CSS Grid ile hizalar ve iki boyutlu bir düzen oluşturur. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* 
+       - `repeat(auto-fit, minmax(280px, 1fr))` → Öğeleri otomatik olarak satıra sığdırır.
+       - `minmax(280px, 1fr)` → Her sütunun minimum 280px, maksimum 1fr (eşit paylaşılan alan) olmasını sağlar.
+       - `auto-fit` → Ekran küçüldüğünde sütunları mümkün olduğunca sıkıştırır ve boş alan bırakmaz.
+    */
+
+    gap: 2rem; /* Öğeler arasında 2rem boşluk bırakır (satır ve sütun aralıkları). */
+    padding: 1rem; /* Kenar boşluğu ekleyerek içeriğin ekran kenarına yapışmasını önler. */
+}
+/* buraya kadar yazılı olduğunda, 2. ürün 1. ürünle aynı satırda, 1. ürün ve 3. ürün ortada ancak 2. ürün sağa yaslanmış durumda */
+
+/* Ürün kartı */
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Kart içindeki öğeler arasında 1rem boşluk bırakır. */
+    transition: all 0.3s ease;
+    /* 
+       - Kart üzerindeki tüm değişiklikler (hover, renk değişimi vb.) 0.3 saniyede gerçekleşir.
+       - `ease` geçişi, animasyonu yumuşatarak doğal bir görünüm sağlar.
+    */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 
+       - Hafif bir gölge ekleyerek kartı arka plandan ayırır.
+       - 4px dikey, 6px bulanıklık ile doğal bir derinlik efekti verir.
+       0 → X (yatay) gölge kayması
+
+        Pozitif değer: Gölge sağa kayar.
+        Negatif değer: Gölge sola kayar.
+        Burada 0 olduğu için yatay kayma yok.
+        4px → Y (dikey) gölge kayması
+
+        Pozitif değer: Gölge aşağı kayar.
+        Negatif değer: Gölge yukarı kayar.
+        Burada 4px olduğu için gölge öğenin altına doğru kayıyor.
+        6px → Bulanıklık (Blur Radius)
+
+        Büyük değerler gölgeyi daha fazla yayar ve yumuşatır.
+        0px olursa gölge keskin olur.
+        Burada 6px olduğu için gölge biraz yumuşatılmış.
+        rgba(0, 0, 0, 0.1) → Gölgenin rengi ve saydamlığı
+
+        0, 0, 0 → Siyah (rgb(0, 0, 0)) renk kodu.
+        0.1 → Saydamlık değeri (0 tamamen şeffaf, 1 tamamen opak).
+        Burada gölge siyah ama %10 opaklık ile (çok hafif) uygulanmış.
+
+    */
+}
+
+.product-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Ürün fotoğrafı */
+.product-image {
+    width: 100%;
+    aspect-ratio: 1;  /* Görselin en-boy oranını 1:1 yapar*/
+    border-radius: 8px;
+    overflow: hidden; /* Taşan içeriği gizler, özellikle köşeler yuvarlatıldığında dışarı taşma olmasını önler. */
+
+}
+
+.product-image img {
+    width: 100;
+    height: 100%;
+    object-fit: cover; /* Görselin boyutunu kontrol eder */
+    transition: transform 0.7s ease;
+}
+
+.product-card:hover .product-image { /*Kullanıcı .product-card öğesinin üzerine geldiğinde, o kart içindeki .product-image içindeki <img> etiketi büyütülür*/
+    transform: scale(1.05);
+}
+
+/* Ürün bilgileri */
+.product-info {
+    display: flex;
+    flex-direction: column; /* 1 sütun üzerinde bütün childlar hizalanır. kapladıkları alan da bulundukları satırın tamamı olur.*/
+    gap: 0.5rem;
+}
+
+.product-title {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.product-subtitle {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0.5rem 0;
+}
+
+/* Buton ayarları */
+.add-to-cart {
+    width: 100%;
+    padding: 0.75rem;
+    background: #000;
+    color: #fff; /* içindeki yazının rengini ifade eder */
+    border: none; /* buton varsayılan olarak kenarlıkla gelir. bu onu kaldırır */
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease; /* hover ile değişiklikler 0.3 saniye içinde gerçekleşir */
+}
+
+.add-to-cart:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* Buton tıklama animasyonu yapalım */
+.add-to-cart:active {
+    transform: scale(0.98);
+}
+
+
+
+/* Bildirim Stili */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    /*position: relative;
+    right: -300px;
+    background: #00c853;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    display: flex;
+    align-items: center;
+    min-width: 200px;*/
+
+    /*2*/
+    display: none; /* Başlangıçta gizli olacak */
+    position: fixed;
+    top: 20px; /*sağ kenardan 20px içeride*/
+    right: 20px;
+    background: "green";
+    z-index: 1000; /* sayfanın üstünde kalmasını sağlar*/
+
+    /*3*/
+    display: none; /* İlk yüklemede gizli */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #00c853; /* Yeşil arka plan */
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.notification.show {
+    /*right: 0;*/
+    /*display: flex;*/ /* Butona basınca görünür olacak */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.notification-icon {
+    background: rgba(255, 255, 255, 0.2);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+.notification-text {
+    font-weight: 500;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .notification {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .notification-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .notification {
+        min-width: auto;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-title {
+        font-size: 1.1rem;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+
+    .notification {
+        font-size: 0.875rem;
+    }
+
+    .notification-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
