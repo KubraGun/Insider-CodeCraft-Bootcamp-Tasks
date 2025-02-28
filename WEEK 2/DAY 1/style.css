@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color-light-green: #a7c4ab;
+    --color-green: #819e85;
+    --color-dark-green: #4a5c4e;
+    --color-darkest-green: #1c2a23;
+    --color-dark-gray: #333730;
+    --color-gray: #5e6058;
+    --color-light-gray: #7d7f78;
+    --color-lightest-gray: #a0a497;
+    --color-background: #d1e1d3;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-dark-gray);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    color: var(--color-darkest-green);
+    font-size: 2.2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none; /* unlike border, it is not in */
+    border-color: var(--color-green);
+    box-shadow: 0 0 5px rgba(129, 158, 133, 0.5);
+}
+
+.btn {
+    background-color: var(--color-green);
+    color: white;
+    border: none;
+    padding: 10px, 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--color-dark-green);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    width: auto;
+}
+
+
+.btn-delete {
+    background-color: var(--color-dark-gray);
+}
+
+.btn-delete:hover {
+    background-color: var(--color-darkest-green);
+} 
+
+/* User Info Styles */
+.user-info-container, .user-profile, .product-form, .cart-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+#userDetails {
+    background-color: var(--color-background);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-background);
+    animation: slideIn 0.3s ease;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: var(--color-dark-green);
+}
+
+.cart-item-price, .cart-item-quantity {
+    color: var(--color-gray);
+    font-size: 0.9rem;
+}
+
+.cart-item-total {
+    font-weight: 600;
+    color: var(--color-dark-green);
+    margin-right: 15px;
+}
+
+.sort-options {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.sort-options select {
+    width: auto;
+    padding: 5px 10px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: 600;
+}
+
+#totalPrice {
+    color: var(--color-dark-green);
+    font-size: 1.2rem;
+}
+
+/* Error Message */
+.error-message {
+    color: var(--color-darkest-green);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    height: 20px;
+}
+
+.item-added {
+    animation: highlight 1s ease;
+}
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-10px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes highlight {
+    0% {background-color: var(--color-light-green);}
+    100% {background-color: transparent;}
+}
+
+
+/* ---- Responsive Design ---- */
+
+/* Large desktops */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Medium desktops */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Small desktops and tablets*/
+@media (max-width: 991px) and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Tablets and large phones */
+@media (max-width: 767px) and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Phones */
+@media (max-width: 575px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 375px) {
+    
+}

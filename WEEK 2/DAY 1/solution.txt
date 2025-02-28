@@ -1,0 +1,90 @@
+Sepetin dinamik olarak çalışması için:
+___________________________________________________
+Algoritma akışı
+___________________________________________________
+FUNCTION renderCart():
+    cartItemsList içeriğini temizle
+    Eğer cartItems boşsa:
+        - "No items in your cart." mesajını göster
+        - totalPrice = "0.00"
+        - RETURN
+    3Sepet ürünleri varsa:
+        - Kullanıcının sıralama seçeneğini kontrol et
+        - Ürünleri sırala ve listeye ekle
+        - Her ürün için:
+            - Yeni `<li>` elemanı oluştur
+            - Ürün bilgilerini ekle (ad, fiyat, miktar)
+            - "Sil" butonunu ekle
+    `reduce()` ile toplam fiyatı hesapla
+    Kullanıcıdan yeni ürün almak isterse:
+        - ürün bilgisi al
+        - Veriyi doğrula ve sepete ekle
+        - `renderCart()` çağır
+    Kullanıcı bir ürünü silerse:
+        - `cartItems.splice()` ile ürünü kaldır
+        - Sepeti güncelle ve ekrana yazdır
+
+____________________________________________________
+
+
+____________________________________________________
+DOMContentLoader
+____________________________________________________
+EVENT: DOMContentLoaded
+    → LocalStorage'tan userData ve cartItems al
+    → Eğer userData varsa → showUserProfile() çağır
+    → Eğer cartItems varsa → renderCart() çağır
+    → Eğer userData yoksa → prompt() ile kullanıcı 
+	bilgilerini al, kaydet, ekranda göster
+___________________________________________________
+
+
+
+
+____________________________________________________
+Managing user info
+____________________________________________________
+EVENT: Form Submit (User Info)
+    → Kullanıcı ad, yaş ve meslek girer
+    → Verileri al ve localStorage'a kaydet
+    → Formu gizle, userProfile göster
+
+EVENT: Edit My Information Click
+    → Kullanıcı bilgilerini forma yerleştir
+    → userProfile gizle, userInfoContainer göster
+____________________________________________________
+
+
+____________________________________________________
+Add product
+____________________________________________________
+EVENT: Add Product Click
+    → Kullanıcıdan ürün adı ve fiyat al
+    → Eğer giriş geçersizse hata mesajı göster
+    → Eğer ürün sepette varsa miktarı artır
+    → Eğer ürün yeni ise sepete ekle
+    → localStorage'a kaydet
+    → renderCart() çağır
+_____________________________________________________
+
+
+
+_____________________________________________________
+Change sort option
+_____________________________________________________
+EVENT: Sort Options Change
+    → Kullanıcının seçtiği sıralama değerini al
+    → cartItems dizisini ilgili kritere göre sırala
+    → renderCart() çağır
+_____________________________________________________
+
+
+_____________________________________________________
+Product delete
+_____________________________________________________
+EVENT: Delete Button Click
+    → Silinecek ürünün index değerini al
+    → cartItems.splice(index, 1) ile ürünü kaldır
+    → localStorage'a güncellenmiş listeyi kaydet
+    → renderCart() çağır
+______________________________________________________

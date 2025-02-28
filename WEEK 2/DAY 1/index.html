@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- title -->
+         <h1 class="title">Shopping Cart</h1>
+
+        <!-- form - user info -->
+        <div class="user-info-container"  id="userInfoContainer">
+            <h2>User Information</h2>
+
+            <form id="userInfoForm">
+
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" required>
+                </div>
+                <div class="form-group">
+                    <label for="userAge">Age:</label>
+                    <input type="number" id="userAge" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="userJob">Job:</label>
+                    <input type="text" id="userJob" min="1" required>
+                </div>
+                <button type="submit" class="btn">Save</button>
+            </form>
+        </div>
+
+        <!-- display - user info -->
+        <div class="user-profile" id="userProfile" style="display: none;">
+            <h2>User Profile</h2>
+            <div id="userDetails"></div>
+            <button id="editUserInfo" class="btn btn-small">Edit My Information</button>
+        </div>
+
+        <!-- add product form -->
+        <div class="product-form" id="productForm" style="display: none;">
+            <h2>Add Product</h2>
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Product Price</label>
+                <input type="number" id="productPrice" min="0" step="0.01" required>
+            </div>
+            <button id="addProductBtn" class="btn">Add Product</button>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+
+        <!-- list of cart -->
+         <div class="cart-container" id="cartContainer" style="display: none;">
+            <h2>Sepetim</h2>
+            <div class="sort-options">
+                <label for="sortOption">Sort by:</label>
+                <select id="sortOptions">
+                    <option value="default">Default</option>
+                    <option value="priceAsc">Price (Increasing)</option>
+                    <option value="priceDesc">Price (Decreasing)</option>
+                    <option value="nameAsc">Name (Increasing)</option>
+                    <option value="nameDesc">Name (Decreasing)</option>
+                </select>
+            </div>
+            <ul id="cartItems" class="cart-items"></ul>
+            <div class="cart-total">
+                <h3>Total: <span id="totalPrice">0.00</span> $</h3>
+            </div>
+         </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
