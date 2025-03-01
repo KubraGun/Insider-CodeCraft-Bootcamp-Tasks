@@ -1,0 +1,13 @@
+prompt() ile kullanıcıdan isim, yaş ve meslek almalı ve bir nesne
+(object) içinde saklamalı.
+
+Bir dizi (array) kullanarak ürünleri sepete eklemeli ve listelemeli.
+(name, price)
+
+reduce() metodunu kullanarak sepetin toplam fiyatını
+hesaplamalı.
+
+Kullanıcıdan dinamik olarak ürün eklemesini isteyebiliriz (*)
+
+Bir ürünü sepetten çıkarmalarını sağlayacak bir fonksiyon nasıl
+yazılabilir bunu araştırmalı ve yapabiliyorsa yapmalı. (*)

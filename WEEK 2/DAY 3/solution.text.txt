@@ -1,0 +1,43 @@
+__________________________________________________________________________________________________________________
+Algorithm 
+__________________________________________________________________________________________________________________
+1. Başla
+2. Kullanıcıdan prompt ile süre al, geçersiz girişse tekrar iste
+3. HTML ögelerinin hazırlanması, geri sayım değeri p içinde olacak, Başlat ve sıfırla butonları oluşturulacak
+4. Başlat butonuna basıldığında eğer geri sayım zaten çalışıyorsa yeni giriş iste, set(Interval) ile saniyeyi azalt
+   0 olduğunda sayaç durdur, süre doldu mesajını kullanıcıya göster
+5. Sıfırla butonuna basılınca clearInterval() ile durdur, yeni giriş için prompt göster
+6. Bitir
+__________________________________________________________________________________________________________________
+
+
+__________________________________________________________________________________________________________________
+Pseudocode
+__________________________________________________________________________________________________________________
+FUNCTION getCountdownTime():
+	DO
+		time <- PROMPT("Please enter a duration (in seconds).")
+	WHILE (time IS NOT A NUMBER OR time <= 0)
+	RETURN time
+
+FUNCTION startCountdown(time):
+	DISPLAY "Countdown has begun: " + time
+	countdownActive <- TRUE
+	WHILE (time > 0 AND countdownActive IS TRUE):
+		WAIT(1) // Wait 1 sec.
+		time <- time - 1
+		UPDATE_DISPLAY(time)
+		IF (time = 0):
+			DISPLAY "Time expired!"
+
+FUNCTION stopCountdown():
+	countdownActive <- FALSE
+	DISPLAY "Countdown stopped"
+
+// Main
+BEGIN
+	time <- getCountdownTime()
+	CREATE_BUTTON("Start", startCountdown(time))
+	CREATE_BUTTON("Reset", stopCountdown())
+END
+____________________________________________________________________________________________________________________

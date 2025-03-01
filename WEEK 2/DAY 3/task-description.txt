@@ -1,0 +1,12 @@
+Geri Sayım Aracı
+
+HTML ile Sayı Girişi ve Butonlar
+
+Kullanıcı geri sayım süresini belirleyebilsin (örn. 10 saniye gibi). (prompt ile alalım veya yapabiliyorsak input elemanlarını kullanalım.)
+Bir 'Başlat' ve bir 'Sıfırla' butonu olsun.
+Geri sayım değeri bir <p> etiketi içinde gösterilsin.
+JavaScript ile Geri Sayım Mantığını Oluşturma
+
+Başlat butonuna basılınca zaman her saniye bir azalsın.
+Süre 0 olduğunda geri sayımı durduralım ve 'Süre doldu!' yazdıralım.
+'Sıfırla' butonuna basınca geri sayımı durdur ve sıfırla.

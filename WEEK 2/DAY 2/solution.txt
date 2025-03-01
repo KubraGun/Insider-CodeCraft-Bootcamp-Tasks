@@ -1,0 +1,46 @@
+Longest Collatz Sequence
+
+Collatz Sanısı, 1937 yılında Lothar Collatz tarafından ortaya atılan ve hâlâ çözülememiş bir matematik problemidir. Bu, herhangi bir pozitif tam sayıdan başlayarak belirli 
+kurallarla oluşturulan bir dizinin her zaman 1'e ulaşıp ulaşmayacağını sorgular. Özellikle, sayı çiftse ikiye bölünür; tekse üçle çarpılıp bir eklenir. Bu işlemler tekrarlanarak
+elde edilen dizinin her zaman 1'e ulaştığı varsayılır, ancak bu henüz kanıtlanamamıştır. Bu problem, "Syracuse Problemi" veya "3n + 1 Problemi" gibi isimlerle de bilinmektedir
+
+https://en.wikipedia.org/wiki/Collatz_conjecture
+
+İncelenen makaleler:
+https://arxiv.org/abs/2101.06107
+https://arxiv.org/abs/1612.07820
+https://arxiv.org/abs/math/0309224
+https://arxiv.org/abs/1909.03562
+
+________________________________________________________________________________________
+pseudocode 1                                                                           
+________________________________________________________________________________________
+FUNCTION find_longest_collatz(limit):
+    longest_chain = 0
+    starting_number = 0
+    cache = EMPTY_MAP  # Önceden hesaplanan değerleri saklamak için
+
+    FOR num FROM 1 TO limit:
+        current = num
+        count = 0
+
+        WHILE current ≠ 1:
+            IF current IN cache:  
+                count += cache[current]  # Önceki hesaplanan zinciri ekle
+                BREAK  
+            
+            IF current IS EVEN:
+                current = current / 2
+            ELSE:
+                current = 3 * current + 1
+            
+            count += 1  
+
+        cache[num] = count  # Sonucu kaydet
+
+        IF count > longest_chain:
+            longest_chain = count
+            starting_number = num  
+
+    RETURN starting_number, longest_chain
+________________________________________________________________________________________
