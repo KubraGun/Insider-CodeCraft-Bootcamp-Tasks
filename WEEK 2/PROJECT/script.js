@@ -386,4 +386,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// ses animasyonu linki sıkıntılı
+// ses animasyonu linki  --> iptal

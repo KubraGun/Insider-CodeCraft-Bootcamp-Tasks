@@ -1,0 +1,112 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Smartphone X2000",
+            "price": 164.50,
+            "category": "Phone"
+        },
+        {
+            "id": 2,
+            "name": "Laptop Pro Ultra",
+            "price": 341.18,
+            "category": "Computer"
+        },
+        {
+            "id": 3,
+            "name": "Wireless Headphones",
+            "price": 35.60,
+            "category": "Computer Accessories"
+        },
+        {
+            "id": 4,
+            "name": "Smartphone Y3000",
+            "price": 219.34,
+            "category": "Phone"
+        },
+        {
+            "id": 5,
+            "name": "Gaming Mouse RGB",
+            "price": 24.66,
+            "category": "Computer Accessories"
+        },
+        {
+            "id": 6,
+            "name": "Mechanical Keyboard MX",
+            "price": 52.07,
+            "category": "Computer Accessories"
+        },
+        {
+            "id": 7,
+            "name": "Ultra HD 4K TV",
+            "price": 492.54,
+            "category": "Electronics"
+        },
+        {
+            "id": 8,
+            "name": "Bluetooth Speaker",
+            "price": 21.92,
+            "category": "Electronics"
+        },
+        {
+            "id": 9,
+            "name": "Camera X-Pro",
+            "price": 309.15,
+            "category": "Photography & Cameras"
+        },
+        {
+            "id": 10,
+            "name": "Gaming Headset Surround",
+            "price": 43.84,
+            "category": "Computer Accessories"
+        },
+        {
+            "id": 11,
+            "name": "Tablet 10.5 inch",
+            "price": 164.50,
+            "category": "Computer"
+        },
+        {
+            "id": 12,
+            "name": "Robot Vacuum Pro",
+            "price": 205.57,
+            "category": "Home Appliances"
+        },
+        {
+            "id": 13,
+            "name": "Smart Bulb RGB",
+            "price": 5.48,
+            "category": "Home Appliances"
+        },
+        {
+            "id": 14,
+            "name": "Tea Maker Deluxe",
+            "price": 41.14,
+            "category": "Home Appliances"
+        },
+        {
+            "id": 15,
+            "name": "Air Purifier",
+            "price": 82.25,
+            "category": "Home Appliances"
+        },
+        {
+            "id": 16,
+            "name": "E-Book Reader PaperLight",
+            "price": 106.73,
+            "category": "Electronics"
+        },
+        {
+            "id": 17,
+            "name": "Smart Thermostat",
+            "price": 68.54,
+            "category": "Home Appliances"
+        },
+        {
+            "id": 18,
+            "name": "Electric Scooter",
+            "price": 492.27,
+            "category": "Electronics"
+        }
+    ]
+}
