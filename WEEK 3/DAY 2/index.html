@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCatalog</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Product Catalog</h1>
+
+            <div class="controls">
+                <button id="loadProductsBtn">List Products</button>
+
+                <div class="filter-section">
+                    <input type="text" id="searchInput" placeholder="Search product...">
+
+                    <select id="sortSelect">
+                        <option value="">Sort by</option>
+                        <option value="asc">Price: Increasing</option>
+                        <option value="desc">Price: Decreasing</option>
+                    </select>
+
+                    <button id="darkModeToggle">🌓</button>
+
+                </div>
+
+            </div>
+        </header>
+
+        <div id="productGrid" class="product-grid"></div>
+
+        <section id="favoriteSection" class="favorite-section">
+            <h2>Favorites</h2>
+            <div id="favoriteProducts" class="favorite-products"></div>
+        </section>
+    </div>
+
+    <!-- JS files -->
+    <script src="./src/js/productService.js"></script>
+    <script src="./src/js/productRenderer.js"></script> 
+    <script src="./src/js/searchFilter.js"></script>
+    <script src="./src/js/app.js"></script>
+</body>
+</html>

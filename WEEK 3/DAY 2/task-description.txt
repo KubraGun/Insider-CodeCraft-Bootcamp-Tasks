@@ -1,0 +1,13 @@
+Hedef: Bu ödevde, JSON veya XML dosyasından ürün verilerini AJAX kullanarak çekeceksiniz ve bu verileri dinamik olarak ürün kartları şeklinde ekranda listeleyeceksiniz. Her bir ürün kartı, ürün adı, fiyatı ve bir dummy link içerecek. "Ürünleri Listele" butonuna tıkladığınızda, ürünler ekranda listelenecek.
+
+Adımlar:
+
+İlk olarak, bir JSON veya XML dosyası oluşturun. Bu dosyada her ürün için name, price ve link gibi bilgiler yer alacak.
+
+Sayfanızda bir "Ürünleri Listele" butonu ekleyin.
+
+Bu butona tıklandığında, oluşturduğunuz JSON veya XML dosyasından ürün verilerini AJAX ile çekin.
+
+Veriyi aldıktan sonra, her bir ürün için dinamik olarak bir kart oluşturun. Kartlarda ürünün adı, fiyatı ve bir link olacak.
+
+Her ürün kartına, dosyanızdaki link bilgisine göre bir bağlantı ekleyin. Kullanıcılar bu kartlara tıkladığında, o ürüne ait link adresine yönlendirilecekler.
