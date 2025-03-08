@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoLister | Organize, Prioritize, Achieve</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- meta description -> for seo, ux, review -->
+    <meta name="description" content="Modern and interactive task management application">
+
+    <!-- add jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-tasks"></i> DoLister</h1>
+            <p class="tagline">Modern Task Management Application</p>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!--  -->
+            <section class="task-form-container">
+                <form id="task-form">
+                    <!--  -->
+                    <div class="form-group">
+                        <label for="task-title">Task Title</label>
+                        <input type="text" id="task-title" placeholder="Add a new task..." required>
+                        <span class="error-message" id="title-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-description">Task Description (optional)</label>
+                        <textarea id="task-description" placeholder="You can write task details..."></textarea>
+                    </div>
+
+                    <!--  -->
+                    <div class="form-group priority-group">
+                        <label>Priority</label>
+                        <div class="priority-options">
+                            <!-- Low -->
+                            <div class="priority-option">
+                                <input type="radio" name="priority" id="low-priority" value="low">
+                                <label for="low-priority">Low</label>
+                            </div>
+
+                            <!-- Middle -->
+                            <div class="priority-option">
+                                <input type="radio" name="priority" id="medium-priority" value="medium">
+                                <label for="medium-priority">medium</label>
+                            </div>
+
+                            <!-- High -->
+                            <div class="priority-option">
+                                <input type="radio" name="priority" id="high-priority" value="high">
+                                <label for="high-priority">High</label>
+                            </div>
+
+                        </div>
+                        <span class="error-message" id="priority-error"></span>
+                    </div>
+
+                    <!--  -->
+                    <button type="submit" id="add-task-btn">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </form>
+            </section>
+
+            <!--  -->
+            <section class="task-controls">
+                <div class="filter-options">
+                    <button id="show-completed-btn">
+                        <i class="fas fa-check-circle"></i> Show completions
+                    </button>
+                    <button id="sort-priority-btn">
+                        <i class="fas fa-sort"></i> Sort by priority
+                    </button>
+                </div>
+            </section>
+
+            <!--  -->
+            <section class="tasks-container" id="tasks-container">
+                <!-- tasks will be added with js -->
+                 <div class="no-tasks-message" id="no-tasks-message">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks added yet</p>
+                    <p class="small">Use the form to add a new task</p>
+                 </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 DoLister | Organize, Prioritize, Achieve</p>
+            <p>• Developed by AKG •</p>
+        </footer>
+    </div>    
+    <script src="./script.js"></script>
+    <!-- <audio src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-back-2575.mp3"></audio> -->
+
+    <!-- <audio id="complete-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-back-2575.mp3"></audio> -->
+
+    <audio id="complete-sound" src="./src/sounds/complete-sound.mp3"></audio>
+
+
+</body>
+</html>
