@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="./src/css/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Product Catalog</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="filter-container">
+                <select id="categoryFilter"></select>
+                <select id="availabilityFilter">
+                    <option value="">All Items</option>
+                    <option value="true">In Stock</option>
+                    <option value="false">Out of Stock</option>
+                </select>
+                <!-- Added Favorites Toggle Button -->
+                <!-- <button id="favorite-btn" class="favorite-btn">Show Favorites Only</button> -->
+                <button id="favoritesToggle" class="favorites-toggle">Show Favorites Only</button>
+
+            </div>
+            <div class="sort-container">
+                <select id="sortSelect"></select>
+            </div>
+        </div>
+
+        <button id="themeToggle">Toggle Dark Mode</button>
+
+        <div id="productsList" class="products-grid"></div>
+
+        <div id="loadingIndicator">Loading products...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./src/js/data-service.js"></script>
+    <script src="./src/js/ui-service.js"></script>
+    <script src="./src/js/event-handlers.js"></script>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>

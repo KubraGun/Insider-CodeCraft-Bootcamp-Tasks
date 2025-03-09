@@ -1,0 +1,406 @@
+/* Main Styles */
+:root {
+    --primary-color: #588B8B;
+    --white: #FFFFFF;
+    --accent: #F28F3B;
+    --highlight: #C8553D;
+    --dark-accent: #555B6E;
+    --light-accent: #89B0AE;
+    --lighter-accent: #BEE3DB;
+    --bg-alt: #FAF9F9;
+    --light-accent-2: #FFD6BA;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-alt);
+    color: var(--dark-accent);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Search Bar */
+.search-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--light-accent);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(88, 139, 139, 0.4);
+}
+
+/* Controls Section (Filters & Sorting) */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-container, .sort-container {
+    display: flex;
+    gap: 10px;
+}
+
+#themeToggle {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#themeToggle:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+#themeToggle:active {
+    background-color: var(--highlight);
+    transform: scale(0.95);
+}
+
+.favorites-toggle {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.favorites-toggle:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.favorites-toggle.active {
+    background-color: var(--highlight);
+}
+
+.favorites-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Select Elements */
+select {
+    padding: 8px 12px;
+    border: 2px solid var(--light-accent);
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--dark-accent);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus Effect for Select */
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(88, 139, 139, 0.4);
+}
+
+/* Yeni Eklenen: Dinamik olarak güncellenen kategori seçenekleri için vurgulama */
+#categoryFilter option.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 24px; /* Increased size for better visibility */
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    transition: all 0.3s ease;
+    line-height: 1; /* Fix vertical alignment */
+    padding: 5px; /* Add some padding for easier clicking */
+    text-shadow: 0 0 2px rgba(0,0,0,0.3); /* Add shadow for better visibility */
+}
+
+.favorite-btn:hover {
+    color: #e74c3c;
+    transform: scale(1.2);
+}
+
+.favorite-btn.active {
+    color: #e74c3c;
+}
+
+/* Ensure highlight class is defined for search term highlighting */
+.highlight {
+    background-color: #FFD6BA;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Product Cards */
+.product-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Yeni Eklenen: jQuery ile animasyonlu hover efekti */
+.product-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--lighter-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Product Information */
+.product-info {
+    padding: 15px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Product Pricing */
+.product-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    font-weight: 700;
+    color: var(--highlight);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--highlight);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Stock Status */
+.stock-status {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.in-stock {
+    color: #2ecc71;
+}
+
+.out-of-stock {
+    color: #e74c3c;
+}
+
+/* Product Category */
+.product-category {
+    display: inline-block;
+    background-color: var(--lighter-accent);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode: Kategori Yazısı */
+.dark-mode .product-category {
+    background-color: var(--dark-accent);
+    color: var(--white);
+}
+
+/* Dark Mode: Ürün Açıklaması */
+.dark-mode .product-description {
+    color: var(--dark-accent);
+}
+
+
+/* Favorite Button */
+.favorite-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.close-details {
+    background-color: transparent;
+    border: none;
+    color: var(--dark-accent);
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-details:hover {
+    color: var(--highlight);
+    transform: scale(1.2);
+}
+
+.close-details:active {
+    transform: scale(0.9);
+}
+/* Yeni Eklenen: Favori butonuna animasyon */
+.favorite-btn:hover, .favorite-btn.active {
+    color: #e74c3c;
+    transform: scale(1.2);
+}
+
+/* Product Details */
+.product-details {
+    background-color: var(--bg-alt);
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+/* Yeni Eklenen: Ürün detaylarının açılma efekti */
+.product-details.active {
+    padding: 15px;
+    max-height: 1000px;
+    border: 1px solid var(--lighter-accent);
+}
+
+/* Loading Indicator */
+#loadingIndicator {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: var(--primary-color);
+    display: none;
+}
+
+/* Yeni Eklenen: Dark Mode */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .product-card {
+    background-color: #333;
+}
+
+.dark-mode .product-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search-container {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}

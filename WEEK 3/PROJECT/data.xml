@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="1">
+        <name>Modern Comfort Sofa</name>
+        <originalPrice>1299.99</originalPrice>
+        <discountPercentage>15</discountPercentage>
+        <discountedPrice>1104.99</discountedPrice>
+        <link>product/modern-comfort-sofa</link>
+        <description>Luxurious and comfortable 3-seater sofa with premium fabric upholstery. Features deep cushions and solid wood legs for durability and style. Perfect for modern living rooms.</description>
+        <image>images/sofa-modern.jpg</image>
+        <category>Living Room</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="2">
+        <name>Minimalist Dining Table</name>
+        <originalPrice>899.99</originalPrice>
+        <discountPercentage>20</discountPercentage>
+        <discountedPrice>719.99</discountedPrice>
+        <link>product/minimalist-dining-table</link>
+        <description>Elegant dining table with clean lines and natural oak finish. Features durable construction and seats up to 6 people comfortably. Ideal for both everyday meals and special occasions.</description>
+        <image>images/dining-table.jpg</image>
+        <category>Dining Room</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="3">
+        <name>Ergonomic Office Chair</name>
+        <originalPrice>499.99</originalPrice>
+        <discountPercentage>25</discountPercentage>
+        <discountedPrice>374.99</discountedPrice>
+        <link>product/ergonomic-office-chair</link>
+        <description>Premium office chair with adjustable height, lumbar support, and breathable mesh backrest. Designed for maximum comfort during long work hours.</description>
+        <image>images/office-chair.jpg</image>
+        <category>Office</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="4">
+        <name>Classic Bookshelf</name>
+        <originalPrice>349.99</originalPrice>
+        <discountPercentage>10</discountPercentage>
+        <discountedPrice>314.99</discountedPrice>
+        <link>product/classic-bookshelf</link>
+        <description>Versatile bookshelf with 5 adjustable shelves. Made from high-quality engineered wood with a walnut finish. Perfect for displaying books, photos, and decorative items.</description>
+        <image>images/bookshelf.jpg</image>
+        <category>Living Room</category>
+        <isStock>false</isStock>
+    </product>
+    <product id="5">
+        <name>Memory Foam Mattress</name>
+        <originalPrice>799.99</originalPrice>
+        <discountPercentage>30</discountPercentage>
+        <discountedPrice>559.99</discountedPrice>
+        <link>product/memory-foam-mattress</link>
+        <description>Premium queen-size memory foam mattress offering perfect balance of comfort and support. Features cooling technology and hypoallergenic cover for a restful sleep experience.</description>
+        <image>images/mattress.jpg</image>
+        <category>Bedroom</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="6">
+        <name>Scandinavian Coffee Table</name>
+        <originalPrice>259.99</originalPrice>
+        <discountPercentage>15</discountPercentage>
+        <discountedPrice>220.99</discountedPrice>
+        <link>product/scandinavian-coffee-table</link>
+        <description>Stylish coffee table with clean Scandinavian design. Features solid wood legs and a white tabletop with storage shelf. Complements any modern living space.</description>
+        <image>images/coffee-table.jpg</image>
+        <category>Living Room</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="7">
+        <name>Modern Floor Lamp</name>
+        <originalPrice>129.99</originalPrice>
+        <discountPercentage>10</discountPercentage>
+        <discountedPrice>116.99</discountedPrice>
+        <link>product/modern-floor-lamp</link>
+        <description>Contemporary floor lamp with adjustable head and marble base. Provides warm, ambient lighting for any room. Energy-efficient LED bulb included.</description>
+        <image>images/floor-lamp.jpg</image>
+        <category>Lighting</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="8">
+        <name>Storage Ottoman</name>
+        <originalPrice>199.99</originalPrice>
+        <discountPercentage>20</discountPercentage>
+        <discountedPrice>159.99</discountedPrice>
+        <link>product/storage-ottoman</link>
+        <description>Multifunctional ottoman with hidden storage space. Covered in durable linen fabric with tufted top design. Perfect for organizing living spaces while adding extra seating.</description>
+        <image>images/ottoman.jpg</image>
+        <category>Living Room</category>
+        <isStock>false</isStock>
+    </product>
+    <product id="9">
+        <name>Rustic Dining Chairs (Set of 4)</name>
+        <originalPrice>599.99</originalPrice>
+        <discountPercentage>15</discountPercentage>
+        <discountedPrice>509.99</discountedPrice>
+        <link>product/rustic-dining-chairs</link>
+        <description>Set of four rustic dining chairs with solid wood frames and comfortable upholstered seats. Features classic design with modern touches for timeless appeal.</description>
+        <image>images/dining-chairs.jpg</image>
+        <category>Dining Room</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="10">
+        <name>Modern Desk Lamp</name>
+        <originalPrice>79.99</originalPrice>
+        <discountPercentage>5</discountPercentage>
+        <discountedPrice>75.99</discountedPrice>
+        <link>product/modern-desk-lamp</link>
+        <description>Sleek desk lamp with adjustable arm and LED light. Features touch control with multiple brightness levels. Perfect for home office or study area.</description>
+        <image>images/desk-lamp.jpg</image>
+        <category>Lighting</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="11">
+        <name>Contemporary Nightstand</name>
+        <originalPrice>199.99</originalPrice>
+        <discountPercentage>10</discountPercentage>
+        <discountedPrice>179.99</discountedPrice>
+        <link>product/contemporary-nightstand</link>
+        <description>Contemporary nightstand with two drawers and open shelf. Made from high-quality MDF with matte finish. Ideal for bedside storage and display.</description>
+        <image>images/nightstand.jpg</image>
+        <category>Bedroom</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="12">
+        <name>Velvet Accent Chair</name>
+        <originalPrice>349.99</originalPrice>
+        <discountPercentage>15</discountPercentage>
+        <discountedPrice>297.49</discountedPrice>
+        <link>product/velvet-accent-chair</link>
+        <description>Luxurious accent chair upholstered in soft velvet fabric. Features curved design with gold-finished metal legs. Adds elegance to any living room or bedroom.</description>
+        <image>images/accent-chair.jpg</image>
+        <category>Living Room</category>
+        <isStock>false</isStock>
+    </product>
+    <product id="13">
+        <name>Wall Mounted Shelves (Set of 3)</name>
+        <originalPrice>89.99</originalPrice>
+        <discountPercentage>10</discountPercentage>
+        <discountedPrice>80.99</discountedPrice>
+        <link>product/wall-mounted-shelves</link>
+        <description>Set of three floating wall shelves in varying sizes. Made from solid wood with metal brackets. Perfect for displaying books, plants, and decorative items.</description>
+        <image>images/wall-shelves.jpg</image>
+        <category>Accessories</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="14">
+        <name>King Size Bed Frame</name>
+        <originalPrice>999.99</originalPrice>
+        <discountPercentage>20</discountPercentage>
+        <discountedPrice>799.99</discountedPrice>
+        <link>product/king-size-bed-frame</link>
+        <description>Modern king-size bed frame with padded headboard and wooden slat support. No box spring needed. Features clean lines and premium upholstery for a contemporary bedroom.</description>
+        <image>images/bed-frame.jpg</image>
+        <category>Bedroom</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="15">
+        <name>Glass Dining Table</name>
+        <originalPrice>749.99</originalPrice>
+        <discountPercentage>25</discountPercentage>
+        <discountedPrice>562.49</discountedPrice>
+        <link>product/glass-dining-table</link>
+        <description>Elegant glass dining table with chrome-finished metal base. Tempered glass top ensures safety and durability. Seats up to 6 people and adds a modern touch to any dining area.</description>
+        <image>images/glass-table.jpg</image>
+        <category>Dining Room</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="16">
+        <name>Executive Desk</name>
+        <originalPrice>899.99</originalPrice>
+        <discountPercentage>15</discountPercentage>
+        <discountedPrice>764.99</discountedPrice>
+        <link>product/executive-desk</link>
+        <description>Spacious executive desk with drawers and cable management system. Made from premium oak with a dark finish. Perfect for home office or professional environments.</description>
+        <image>images/executive-desk.jpg</image>
+        <category>Office</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="17">
+        <name>Sectional Sofa</name>
+        <originalPrice>1799.99</originalPrice>
+        <discountPercentage>25</discountPercentage>
+        <discountedPrice>1349.99</discountedPrice>
+        <link>product/sectional-sofa</link>
+        <description>Modular sectional sofa with chaise lounge. Features reversible configuration and premium microfiber upholstery. Perfect for family rooms and entertainment spaces.</description>
+        <image>images/sectional-sofa.jpg</image>
+        <category>Living Room</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="18">
+        <name>Pendant Light Fixture</name>
+        <originalPrice>159.99</originalPrice>
+        <discountPercentage>10</discountPercentage>
+        <discountedPrice>143.99</discountedPrice>
+        <link>product/pendant-light</link>
+        <description>Modern pendant light with brass finish and glass shade. Adjustable hanging height and compatible with dimmer switches. Creates elegant ambient lighting for dining areas or entryways.</description>
+        <image>images/pendant-light.jpg</image>
+        <category>Lighting</category>
+        <isStock>false</isStock>
+    </product>
+    <product id="19">
+        <name>Dresser with Mirror</name>
+        <originalPrice>649.99</originalPrice>
+        <discountPercentage>20</discountPercentage>
+        <discountedPrice>519.99</discountedPrice>
+        <link>product/dresser-mirror</link>
+        <description>Six-drawer dresser with attached tilting mirror. Features solid wood construction with smooth gliding drawers. Perfect for organizing clothes while adding style to any bedroom.</description>
+        <image>images/dresser.jpg</image>
+        <category>Bedroom</category>
+        <isStock>true</isStock>
+    </product>
+    <product id="20">
+        <name>Bookshelves with Desk</name>
+        <originalPrice>499.99</originalPrice>
+        <discountPercentage>15</discountPercentage>
+        <discountedPrice>424.99</discountedPrice>
+        <link>product/bookshelf-desk</link>
+        <description>Combination bookshelf and desk unit with integrated workspace. Features adjustable shelves and cable management. Ideal for small spaces and home offices.</description>
+        <image>images/bookshelf-desk.jpg</image>
+        <category>Office</category>
+        <isStock>true</isStock>
+    </product>
+</products>
