@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userly</title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--  -->
+        <h1>User List</h1>
+        
+        <!--  -->
+        <div class="controls">
+            <button id="toggle-dark-mode">Dark Mode</button>
+            <button id="reset-data">Reset Data</button>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search by name or city...">
+                <button id="search-button">Search</button>
+            </div>
+            <div class="sort-buttons">
+                <button id="sort-by-name">Sort by Name</button>
+                <button id="sort-by-email">Sort by e-mail</button>
+                <button id="sort-by-city">Sort by City</button>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="ins-api-users"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

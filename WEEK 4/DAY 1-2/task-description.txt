@@ -1,0 +1,26 @@
+Ödev
+
+Bir HTML dosyasına 'ins-api-users' sınıfına sahip bir eleman (div) ekleyin. Aşağıdaki işlemlerin hepsini JS
+dosyası içerisinde bu elemana append olacak şekilde (CSS dahil) yönetin.
+
+API'den Kullanıcı Verisini Çekme
+
+Fetch API kullanarak https://jsonplaceholder.typicode.com/users adresinden kullanıcı verisini çekin.
+
+Gelen veriyi bir Promise içinde yönetin.
+
+Hata yönetimi yapın (örneğin, API'ye ulaşılamazsa kullanıcıya hata mesajı gösterin).
+
+localStorage Kullanımı
+
+Çekilen veriyi localStorage'a kaydedin (1 gün süreyle)
+
+Eğer sayfa yenilendiğinde localStorage'da veri varsa, tekrar API'den veri çekmeden bunu kullanın.
+
+Basit Bir Arayüz Oluşturma
+
+Kullanıcıları listeleyen bir HTML sayfası oluşturun.
+
+Kullanıcı adı, e-posta ve adres bilgilerini görüntüleyin.
+
+Kullanıcıları silme seçeneği ekleyin (silinen kullanıcı localStorage'dan da kaldırılmalı). //Opsiyonel
