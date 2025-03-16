@@ -1,0 +1,1 @@
+Odev3 klasöründe bulunan koddaki akışı debuglamanızı ve debuglarken problemleri nasıl bulduğununu anlatmanızı istiyoruz.
